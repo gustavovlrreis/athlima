@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Cadastro de venda</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Cadastrar venda</h1>
+        
+        <form th:action="@{/gravar-venda}" th:object="${venda}" method="post">
+            <p>CPF: <input type="text" th:field="${venda.cpfCliente}" /></p>
+            <p>Valor: <input type="text" th:field="${venda.valor}" /></p>
+            <p>Forma de Pagamento: <input type="text" th:field="${venda.formaPagamento}" /></p>
+            <p><input type="submit" value="Salvar" /></p>
+        </form>
+        
+        <a th:href="@{/area-usuario}"><button type="button" class="btn btn-dark">Voltar</button></a>
+        
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Área do Usuário</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Área do Usuário</h1>
+        <nav>
+            <a th:href="@{/inserir-cliente}">Cadastrar Cliente</a>
+            <a th:href="@{/inserir-funcionario}">Cadastrar Funcionário</a>
+            <a th:href="@{/inserir-venda}">Cadastrar Venda</a>
+            <a th:href="@{/listagem}">Relatório de Vendas</a>
+        </nav>
+        
+        <a th:href="@{/}"><button type="button" class="btn btn-dark" th:href="@{/}">Voltar</button></a>
+        
+    </body>
+</html>

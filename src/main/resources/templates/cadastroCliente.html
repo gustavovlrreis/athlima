@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Cadastro de cliente</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Cadastrar cliente</h1>
+        
+        <form th:action="@{/gravar-cliente}" th:object="${cliente}" method="post">
+            <p>Nome: <input type="text" th:field="${cliente.nome}" /></p>
+            <p>Contato: <input type="text" th:field="${cliente.contato}" /></p>
+            <p>CPF: <input type="text" th:field="${cliente.cpf}" /></p>
+            <p>Endereço: <input type="text" th:field="${cliente.endereco}" /></p>
+            <p>Ponto de Referência: <input type="text" th:field="${cliente.pontoReferencia}" /></p>
+            <p><input type="submit" value="Salvar" /></p>
+        </form>
+        
+        <a th:href="@{/area-usuario}"><button type="button" class="btn btn-dark">Voltar</button></a>
+        
+    </body>
+</html>

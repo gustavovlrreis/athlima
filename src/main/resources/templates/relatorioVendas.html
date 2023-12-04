@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Relatório de vendas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Relatório de vendas</h1>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>CPF</th>
+                    <th>Valor</th>
+                    <th>Forma de Pagamento</th>
+                </tr>
+            </thead>
+            <tbody> 
+                   <tr th:each="venda : ${lista}"> 
+                       <td th:text="${venda.id}"></td>  
+                       <td th:text="${venda.cpfCliente}"></td> 
+                        <td th:text="${venda.valor}"></td> 
+                        <td th:text="${venda.formaPagamento}"></td>
+                   </tr> 
+             </tbody>
+        </table>
+        
+        <a th:href="@{/area-usuario}"><button type="button" class="btn btn-dark">Voltar</button></a>
+    </body>
+</html>

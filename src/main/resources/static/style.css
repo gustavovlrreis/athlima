@@ -1,0 +1,48 @@
+body {
+    color: black;
+    background: white;
+}
+
+nav {
+    width: 20em;
+}
+
+nav a, nav a:visited  {
+    padding: 0.2em;
+    color: black;
+    background: lightgray;
+    text-decoration: none;
+    display: block;
+    margin: 0.2em 0;
+}
+
+a, a:visited {
+    color: darkblue;
+}
+
+button, input[type=submit] {
+    color: white;
+    background: black;
+}
+
+input[type=text] {
+    border-color: black;
+    color: black;
+    background: white;
+}
+
+table {
+    border: 1px black solid;
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 100%;
+}
+
+table th, table td {
+    border: 1px black solid;
+    padding: 0.2em;
+}
+
+table th {
+    background: lightgray;
+}
